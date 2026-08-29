@@ -285,7 +285,7 @@ with col2:
 
         max_value=1000,
 
-        value=360,
+        value=1,
 
         step=1
 
@@ -402,57 +402,15 @@ if st.button(
 
 
         # ==========================================
-        # APPROVED
+        # APPROVED / REJECTED
         # ==========================================
 
         if result == "Loan Approved":
-
-            st.markdown(
-                f"""
-                <div class="approved">
-
-                    <div class="result-title">
-                        ✅ Loan Approved
-                    </div>
-
-                    <div class="result-subtitle">
-
-                        Predicted confidence:
-                        <b>{confidence * 100:.2f}%</b>
-
-                    </div>
-
-                </div>
-                """,
-                unsafe_allow_html=True
-            )
-
-
-        # ==========================================
-        # REJECTED
-        # ==========================================
-
+            st.success(f"✅ Loan Approved")
+            st.markdown(f"**Predicted confidence:** {confidence * 100:.2f}%")
         else:
-
-            st.markdown(
-                f"""
-                <div class="rejected">
-
-                    <div class="result-title">
-                        ❌ Loan Rejected
-                    </div>
-
-                    <div class="result-subtitle">
-
-                        Predicted confidence:
-                        <b>{confidence * 100:.2f}%</b>
-
-                    </div>
-
-                </div>
-                """,
-                unsafe_allow_html=True
-            )
+            st.error(f"❌ Loan Rejected")
+            st.markdown(f"**Predicted confidence:** {confidence * 100:.2f}%")
 
 
 # ==================================================
