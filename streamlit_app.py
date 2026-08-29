@@ -146,21 +146,8 @@ st.markdown(
 # HERO
 # ==================================================
 
-st.markdown(
-    """
-    <div class="hero">
-
-        <h1>🏦 Loan Predictor</h1>
-
-        <p>
-        Machine Learning powered loan eligibility
-        prediction system.
-        </p>
-
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+st.title("🏦 Loan Predictor")
+st.caption("Machine Learning powered loan eligibility prediction system.")
 
 
 # ==================================================
