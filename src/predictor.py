@@ -1,14 +1,18 @@
 import pickle
+from pathlib import Path
+
 import pandas as pd
 
+ROOT_DIR = Path(__file__).resolve().parents[1]
+MODEL_DIR = ROOT_DIR / "model"
 
 # Load model
-with open("model/loan_model.pkl", "rb") as file:
+with (MODEL_DIR / "loan_model.pkl").open("rb") as file:
     model = pickle.load(file)
 
 
 # Load encoders
-with open("model/encoders.pkl", "rb") as file:
+with (MODEL_DIR / "encoders.pkl").open("rb") as file:
     encoders = pickle.load(file)
 
 

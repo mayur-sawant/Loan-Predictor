@@ -1,7 +1,14 @@
+from pathlib import Path
+
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
+
+ROOT_DIR = Path(__file__).resolve().parents[1]
+DATA_PATH = ROOT_DIR / "data" / "train.csv"
+
+# import data
 
 details = [
     "Gender",
@@ -15,9 +22,7 @@ details = [
 ]
 
 def load_data():
-    data = pd.read_csv("data/train.csv")
-
-    
+    data = pd.read_csv(DATA_PATH)
 
     encoders = {}
 
