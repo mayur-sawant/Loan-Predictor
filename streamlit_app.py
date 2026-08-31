@@ -172,7 +172,7 @@ with st.sidebar:
 
     st.write("Algorithm: Logistic Regression")
 
-    st.write("Preprocessing: Scikit-Learn Pipeline")
+    st.write("Scikit-Learn")
 
     st.write("UI: Streamlit")
 
@@ -301,8 +301,8 @@ with col2:
         horizontal=True,
 
         format_func=lambda x:
-            "Good (1)" if x == 1
-            else "Bad (0)"
+            "Yes" if x == 1
+            else "No"
 
     )
 
